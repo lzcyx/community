@@ -27,13 +27,13 @@
     <insert id="insertUser" parameterType="User" keyProperty="id">
         insert into user(<include refid="insertFields"></include>)
         values (#{username},#{password},#{salt},#{email},#{type},#{status},#{activationCode},
-                #{headerUrl},#{createTime})
+        #{headerUrl},#{createTime})
     </insert>
 
     <update id="updateStatus">
         update user set status=#{status} where id=#{id}
     </update>
-    
+
     <update id="updateHeader">
         update user set header_url=#{headerUrl} where id=#{id}
     </update>
